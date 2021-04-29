@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "A Slackbot that responds to non-inclusive language with inclusive alternatives",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,11 +12,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/merlinpatt/inclusion-bot.git"
   },
-  "keywords": [
-    "inclusion",
-    "diversity",
-    "language"
-  ],
+  "keywords": [ "inclusion", "diversity", "language" ],
   "author": "Merlin (they/them)",
   "license": "ISC",
   "bugs": {
