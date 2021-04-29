@@ -23,3 +23,5 @@ router.post('/events', (request, response) => {
     return response.send(request.body.challenge);
   }
 });
+
+app.use('/', router);
