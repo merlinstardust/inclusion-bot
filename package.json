@@ -11,7 +11,11 @@
     "type": "git",
     "url": "git+ssh://git@github.com/merlinpatt/inclusion-bot.git"
   },
-  "keywords": [ "inclusion", "diversity", "language" ],
+  "keywords": [
+    "inclusion",
+    "diversity",
+    "language"
+  ],
   "author": "Merlin (they/them)",
   "license": "ISC",
   "bugs": {
@@ -20,6 +24,7 @@
   "homepage": "https://github.com/merlinpatt/inclusion-bot#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "express": "^4.17.1",
     "nodemon": "^2.0.7",
     "slackbots": "^1.2.0"
   },
