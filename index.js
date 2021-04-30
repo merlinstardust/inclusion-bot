@@ -32,6 +32,8 @@ router.post('/events', (request, response) => {
 
   console.info('Incoming request');
   console.info(request.body);
+
+  response.send('OK');
 });
 
 app.listen(PORT, () => {
