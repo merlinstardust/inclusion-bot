@@ -29,6 +29,9 @@ router.post('/events', (request, response) => {
     console.info('URL verification', request.body.challenge); // eslint-disable-line no-console
     return response.send(request.body.challenge);
   }
+
+  console.info('Incoming request');
+  console.info(request.body);
 });
 
 app.listen(PORT, () => {
