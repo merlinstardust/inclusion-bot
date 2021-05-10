@@ -37,6 +37,10 @@ router.get('/slack/oauth_redirect', (request, response) => {
   oauthInstaller.handleCallback(request, response);
 });
 
+router.get('/privacy', (request, response) => {
+  response.render('privacy');
+});
+
 app.listen(PORT, () => {
   console.info(`\n------------------------------`);
   console.info(`Server started on port ${PORT}`); // eslint-disable-line no-console

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='/style.css'>
+    <title>Inclusion Bot</title>
+  </head>
+  <body>
+    <div class='container'>
+      <h1>Privacy Policy</h1>
+      <h2>How Inclusion Bot uses permissions</h2>
+      <p>
+        Inclusion Bot only requests Bot level Slack permissions, which means it has no authority to access detailed user information or perform actions on behalf of users.
+      </p>
+      <p>
+        These are the specific permissions requested and how they are used:
+      </p>
+      
+      <dl>
+        <dt>channels:history</dt>
+        <dd>To scan messages for non-inclusive languages if added to a channel</dd>
+        
+        <dt>groups:history</dt>
+        <dd>To scan messages for non-inclusive languages if added to a channel</dd>
+        
+        <dt>mpim:history</dt>
+        <dd>To scan messages for non-inclusive languages if added to a channel</dd>
+        
+        <dt>chat:write</dt>
+        <dd>To reply to messages with inclusive alternatives</dd>        
+      </dl>
+
+      <h2>We will never:</h2>
+      <ul>
+        <li>
+          Store or view any of your messages
+        </li>
+        <li>
+          Store any personal information on our database regarding names, emails or other personal information
+        </li>
+      </ul>
+      
+      <h2>We only store:</h2>
+      <ul>
+        <li>
+          Team or Enterprise ID
+        </li>
+        <li>
+          Team or Enterprise Name
+        </li>
+        <li>
+          Access tokens with relevant scopes
+        </li>
+        <li>
+          User ID if a user has granted the app permission
+        </li>
+      </ul>
+
+      <h2>Website Data</h2>
+      <p>
+        The Inclusion Bot website does not collect any of your data.
+      </p>
+    </div>
+  </body>
+</html>

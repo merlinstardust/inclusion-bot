@@ -2,6 +2,7 @@ body {
   background-color: hsl(240deg, 66%, 46%);
   color: white;
   font-family: Arial;
+  text-align: center;
 }
 
 .container {
@@ -14,7 +15,6 @@ body {
 
 h1 {
   font-size: 44px;
-  text-align: center;
 }
 
 p {
@@ -22,11 +22,24 @@ p {
   font-size: 20px;
 }
 
-a {
+a.install {
   padding: 10px 20px;
   border-radius: 4px;
+  margin-bottom: 30px;
   background-color: hsl(164deg, 100%, 19%);
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   font-size: 22px;
   text-decoration: none;
+}
+
+a.install:hover {
+  background-color: hsl(164deg, 100%, 15%);
+}
+
+a.privacy {
+  color: hsl(0deg, 0%, 100%);
+}
+
+a.privacy:hover {
+  color: hsl(0deg, 0%, 80%);
 }

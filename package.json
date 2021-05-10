@@ -7,17 +7,14 @@
   "scripts": {
     "start": "nodemon --experimental-specifier-resolution=node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "setenv": "heroku config:set $(cat .env.$ENV | tr '\n' ' ')",
     "postinstall": "link-module-alias"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/merlinpatt/inclusion-bot.git"
   },
-  "keywords": [
-    "inclusion",
-    "diversity",
-    "language"
-  ],
+  "keywords": [ "inclusion", "diversity", "language" ],
   "author": "Merlin (they/them)",
   "license": "ISC",
   "bugs": {
