@@ -42,7 +42,7 @@ router.get('/privacy', (request, response) => {
 });
 
 app.listen(PORT, () => {
-  console.info(`\n------------------------------`);
+  console.info(`\n------------------------------`); // eslint-disable-line no-console
   console.info(`Server started on port ${PORT}`); // eslint-disable-line no-console
 });
 

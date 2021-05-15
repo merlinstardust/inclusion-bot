@@ -1,5 +1,6 @@
 import { WebClient } from '@slack/web-api';
 import mongo from '~/mongo';
+import logger from '~/logger';
 
 const sendMessage = async ({ enterprise, team, channel, text }) => {
   try {
@@ -9,7 +10,7 @@ const sendMessage = async ({ enterprise, team, channel, text }) => {
     const web = new WebClient(install.bot.token);
     await web.chat.postMessage({ channel, text });
   } catch (error) {
-    console.error(error);
+    logger.error(error);
   }
 };
 
