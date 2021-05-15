@@ -1,5 +1,4 @@
 const wordReplacementsMap = {
-  test: [],
   guys: [
     'associates',
     'band',
@@ -40,6 +39,7 @@ const wordReplacementsMap = {
   blacklist: [ 'deny list', 'unsafe list', 'block list', 'exclude list', 'avoid list' ],
   master: [ 'main', 'primary', 'leader', 'source' ],
   slave: [ 'secondary', 'subordinate', 'replica' ],
+  transgendered: [ 'transgender' ],
 };
 
 export default wordReplacementsMap;

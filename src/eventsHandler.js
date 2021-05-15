@@ -16,7 +16,7 @@ const eventsHandler = (event) => {
     .reduce((string, [ word, replacements ]) => {
       const regex = new RegExp(`\\b(${word})\\b`);
       const matches = text.match(regex);
-      logger.info(`regex: [${regex}], matches: [${matches}]`);
+      logger.info(`regex: [${regex}], matches: [${!!matches}]`);
 
       if (matches) {
         suggestionCount += 1;
