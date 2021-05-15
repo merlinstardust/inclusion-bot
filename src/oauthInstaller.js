@@ -1,6 +1,6 @@
 import { InstallProvider, LogLevel } from '@slack/oauth';
 import mongo from '~/mongo';
-console.log(LogLevel);
+
 const oauthInstaller = new InstallProvider({
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
