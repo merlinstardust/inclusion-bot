@@ -35,7 +35,7 @@ router.get('/', async (request, response) => {
 });
 
 router.get('/slack/oauth_redirect', (request, response) => {
-  logger.log(request.headers, request.params, request.body);
+  logger.info(request.headers, request.params, request.body);
   oauthInstaller.handleCallback(request, response);
 });
 
