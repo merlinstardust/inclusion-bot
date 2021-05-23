@@ -13,10 +13,10 @@
       <p>
         Inclusion Bot was successfully installed.
       </p>
-      <a class='button' href='https://app.slack.com/client/<%= it.installation.team.id %>'>
+      <a class='button' href='<%= it.browserUrl %>'>
         Click here to open the Slack browser app
       </a>
-      <a class='button' href='slack://app?team=<%= it.installation.team.id %>'>
+      <a class='button' href='slack://app?team=<%= it.appUrl %>'>
         Click here to open the Slack app
       </a>
       <p>

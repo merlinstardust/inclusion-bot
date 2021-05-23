@@ -17,7 +17,12 @@ const oauthInstaller = new InstallProvider({
 oauthInstaller.callbackOptions = {
   success: (installation, metadata, request, response) => {
     logger.info({ installation, metadata });
-    response.render('oauthSuccess', { installation, metadata });
+    const { team, enterprise, isEnterpriseInstall } = installation;
+    const id = isEnterpriseInstall ? enterprise.id : team.id;
+
+    const appUrl = `slack://app?team=${id}`;
+    const browserUrl = `https://app.slack.com/client/${id}`;
+    response.render('oauthSuccess', { appUrl, browserUrl });
   },
   failure: (error, installOptions, request, response) => {
     logger.error(error, installOptions);
