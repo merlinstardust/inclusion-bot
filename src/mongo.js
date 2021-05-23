@@ -41,13 +41,21 @@ const saveInstall = async (install) => {
   const { isEnterpriseInstall, enterprise, team } = install;
 
   if (isEnterpriseInstall) {
-    const insertResult = await oauthInstalls.update({ enterpriseId: enterprise.id }, install, { upsert: true });
+    const insertResult = await oauthInstalls.update(
+      { enterpriseId: enterprise.id },
+      { enterpriseId: enterprise.id, ...install },
+      { upsert: true },
+    );
     logger.info(`enterprise inserted: ${!!insertResult}`);
     logger.info(insertResult);
     return insertResult;
   }
   else {
-    const insertResult = await oauthInstalls.update({ teamId: team.id }, install, { upsert: true });
+    const insertResult = await oauthInstalls.update(
+      { teamId: team.id },
+      { teamId: team.id, ...install },
+      { upsert: true },
+    );
     logger.info(`team inserted: ${!!insertResult}`);
     logger.info(insertResult);
     return insertResult;
