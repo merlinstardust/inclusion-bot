@@ -4,7 +4,6 @@ import express from 'express';
 import { createEventAdapter } from '@slack/events-api';
 import oauthInstaller from '~/oauthInstaller';
 import eventsHandler from '~/eventsHandler';
-import logger from '~/logger';
 
 dotenv.config();
 const SIGNING_SECRET = process.env.SIGNING_SECRET;
@@ -35,8 +34,7 @@ router.get('/', async (request, response) => {
 });
 
 router.get('/slack/oauth_redirect', (request, response) => {
-  logger.info(request.headers, request.params, request.body);
-  oauthInstaller.handleCallback(request, response);
+  oauthInstaller.handleCallback(request, response, oauthInstaller.callbackOptions);
 });
 
 router.get('/privacy', (request, response) => {

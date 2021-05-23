@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='/style.css'>
+    <title>Oauth Success - Inclusion Bot</title>
+  </head>
+  <body>
+    <div class='container'>
+      <h1>Success</h1>
+      <p>
+        Inclusion Bot was successfully installed.
+      </p>
+      <a class='button' href='https://app.slack.com/client/<%= it.installation.team.id %>'>
+        Click here to open the Slack browser app
+      </a>
+      <a class='button' href='slack://app?team=<%= it.installation.team.id %>'>
+        Click here to open the Slack app
+      </a>
+      <p>
+        <a class='privacy' href='/privacy'>
+          Privacy Policy
+        </a>
+      </p>
+    </div>
+  </body>
+</html>

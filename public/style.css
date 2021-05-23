@@ -22,7 +22,12 @@ p {
   font-size: 20px;
 }
 
-a.install {
+ul.error {
+  text-align: left;
+}
+
+a.button {
+  display: block;
   padding: 10px 20px;
   border-radius: 4px;
   margin-bottom: 30px;

@@ -1,7 +1,25 @@
 const logger = {
-  info: (...args) => process.env.DEBUG && console.info(...args),
-  warn: (...args) => process.env.DEBUG && console.warn(...args),
-  error: (...args) => process.env.DEBUG && console.error(...args),
+  info: (...args) => {
+    if (process.env.DEBUG) {
+      console.info('INFO');
+      console.info(...args);
+      console.log('INFO END\n');
+    }
+  },
+  warn: (...args) => {
+    if (process.env.DEBUG) {
+      console.warn('WARN');
+      console.warn(...args);
+      console.log('WARN END\n');
+    }
+  },
+  error: (...args) => {
+    if (process.env.DEBUG) {
+      console.error('ERROR');
+      console.error(...args);
+      console.log('ERROR END\n');
+    }
+  },
 };
 
 export default logger;

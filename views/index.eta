@@ -13,7 +13,7 @@
     <p>
       A Slackbot that responds to non-inclusive language with inclusive alternatives
     </p>
-    <a class='install' href='<%= it.oauthUrl %>'>
+    <a class='button' href='<%= it.oauthUrl %>'>
       Click here to install
     </a>
     <p>
