@@ -17,12 +17,6 @@
         <li>Error Code: <%= it.code %></li>
         <li>Error Message: <%= it.message %></li>
       </ul>
-      <a class='button' href='https://app.slack.com/client/<%= it.oauthUrl %>'>
-        Click here to open the Slack browser app
-      </a>
-      <a class='button' href='slack://app?team=<%= it.oauthUrl %>'>
-        Click here to open the Slack app
-      </a>
       <p>
         <a class='button' href='/'>
           Return to the Home Page<br />to Try Again
