@@ -13,12 +13,16 @@
       <p>
         Inclusion Bot was successfully installed.
       </p>
-      <a class='button' href='<%= it.browserUrl %>'>
-        Click here to open the Slack browser app
-      </a>
-      <a class='button' href='slack://app?team=<%= it.appUrl %>'>
-        Click here to open the Slack app
-      </a>
+      <p>
+        <a class='button' href='<%= it.browserUrl %>'>
+          Click here to open the<br />Slack browser app
+        </a>
+      </p>
+      <p>
+        <a class='button' href='slack://app?team=<%= it.appUrl %>'>
+          Click here to open the<br />Slack desktop app
+        </a>
+      </p>
       <p>
         <a class='privacy' href='/privacy'>
           Privacy Policy
