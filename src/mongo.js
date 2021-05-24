@@ -39,11 +39,12 @@ const getInstall = async ({ isEnterpriseInstall, enterpriseId, teamId }) => {
 const saveInstall = async (install) => {
   const oauthInstalls = await collections.oauthInstalls();
   const { isEnterpriseInstall, enterprise, team } = install;
+  const updatedAt = new Date().toISOString();
 
   if (isEnterpriseInstall) {
     const insertResult = await oauthInstalls.update(
       { enterpriseId: enterprise.id },
-      { enterpriseId: enterprise.id, ...install },
+      { enterpriseId: enterprise.id, updatedAt, ...install },
       { upsert: true },
     );
     logger.info(`enterprise inserted: ${!!insertResult}`);
@@ -53,7 +54,7 @@ const saveInstall = async (install) => {
   else {
     const insertResult = await oauthInstalls.update(
       { teamId: team.id },
-      { teamId: team.id, ...install },
+      { teamId: team.id, updatedAt, ...install },
       { upsert: true },
     );
     logger.info(`team inserted: ${!!insertResult}`);
